@@ -22,7 +22,7 @@ public class SkuDaoImpl implements SkuDao{
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lucene_demom","root","futian");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lucene_demo?serverTimezone=GMT","root","futian");
 
             String sql = "SELECT * from tb_sku";
             preparedStatement = connection.prepareStatement(sql);
